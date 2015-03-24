@@ -49,8 +49,11 @@
       <div class="container nav-collapse">
         <ul class="nav">
           <!--<li><%#= link_to current_user.email, "/users/edit" %></li>-->
-          <li><%= link_to "Sign out", "/users/sign_out", :method => "DELETE"  %></li>
-          <a href="/twitter_oauth_url" class="btn btn-primary btn-larg">Fetch Twitter Details</a>
+
+          <% if user_signed_in? %>
+            <li><%= link_to "Sign out", "/users/sign_out", :method => "DELETE"  %></li>
+          <% end %>
+          <a href="/twitter_oauth_url" class="btn btn-primary btn-larg">Connect to Twitter</a>
           <a href="/facebook" class="btn btn-primary btn-larg">Fetch Facebook Details</a>
         </ul>
       </div><!--/.nav-collapse -->
