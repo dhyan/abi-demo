@@ -35,6 +35,7 @@ end
 gem 'devise'
 gem 'linkedin'
 gem 'twitter'
+gem 'koala'
 gem "less-rails"
 gem 'therubyracer', platforms: :ruby
 gem 'twitter-bootstrap-rails'

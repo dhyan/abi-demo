@@ -9,6 +9,10 @@ ApiDemo::Application.routes.draw do
   get '/twitter_profile' => "twitter#twitter_profile"
   get '/oauth_account' => "twitter#oauth_account"
   get '/twitter_oauth_url' => 'twitter#generate_twitter_oauth_url'
+
+  resources :facebook
+  get "/callback" => "facebook#callback"
+  get "/facebook_profile" => "facebook#facebook_profile"
   root :to => 'linkedin#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

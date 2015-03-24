@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150322000353) do
+ActiveRecord::Schema.define(version: 20150322154616) do
 
   create_table "basic_profiles", force: true do |t|
     t.string   "first_name"
@@ -39,6 +39,13 @@ ActiveRecord::Schema.define(version: 20150322000353) do
     t.string   "activities"
     t.string   "notes"
     t.integer  "full_profile_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "facebook_oauth_settings", force: true do |t|
+    t.string   "access_token"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

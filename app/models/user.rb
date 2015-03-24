@@ -10,4 +10,5 @@ class User < ActiveRecord::Base
   has_one :basic_profile
   has_one :full_profile
   has_one :linkedin_oauth_setting
+  has_one :facebook_oauth_setting
 end
