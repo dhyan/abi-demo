@@ -50,4 +50,4 @@ gem 'twitter-bootstrap-rails'
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+ gem 'byebug', group: [:development, :test]
